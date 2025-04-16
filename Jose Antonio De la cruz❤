@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda Crochet</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      background: #666;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+    .product-card p {
+      color: #555;
+    }
+    .product-card button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .product-card button:hover {
+      background: #218838;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Mi Tienda Crochet</h1>
+    <p>Descubre patrones únicos y originales para tus creaciones</p>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <!-- Sección de productos -->
+    <section id="productos">
+      <h2 style="text-align:center;">Nuestros Productos</h2>
+      <div class="products">
+        <!-- Producto 1 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x300.png?text=Patr%C3%B3n+Top+1" alt="Patrón Top 1">
+          <h3>Top Boho</h3>
+          <p>RD$400.00</p>
+          <button onclick="comprarProducto('Top Boho',400)">Comprar</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x300.png?text=Patr%C3%B3n+Falda" alt="Patrón Falda">
+          <h3>Falda Floral</h3>
+          <p>RD$450.00</p>
+          <button onclick="comprarProducto('Falda Floral',450)">Comprar</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x300.png?text=Patr%C3%B3n+Vestido" alt="Patrón Vestido">
+          <h3>Vestido de Verano</h3>
+          <p>RD$500.00</p>
+          <button onclick="comprarProducto('Vestido de Verano',500)">Comprar</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección de contacto -->
+    <section id="contacto" style="margin-top:40px;">
+      <h2 style="text-align:center;">Contacto</h2>
+      <p style="text-align:center;">¿Tienes alguna pregunta? Escríbenos a <a href="mailto:info@mitiendacrochet.com">info@mitiendacrochet.com</a></p>
+    </section>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Mi Tienda Crochet. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script de ejemplo para simular compra -->
+  <script>
+    function comprarProducto(nombre, precio) {
+      // Aquí podrías redirigir a un proceso de pago
+      // Por ejemplo, una redirección a PayPal utilizando parámetros
+      // Este ejemplo abre una alerta, puedes modificarlo por tu integración real
+      alert("Has seleccionado: " + nombre + " por RD$" + precio + ".\nProcede al pago.");
+      // Ejemplo de redirección a PayPal (descomenta y configura la URL según necesites)
+      // window.open("https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_paypal@example.com&item_name=" + encodeURIComponent(nombre) + "&amount=" + precio + "&currency_code=DOP", "_blank");
+    }
+  </script>
+
+</body>
+</html>
